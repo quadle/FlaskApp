@@ -1,3 +1,8 @@
+import pandas as pd
+from bs4 import BeautifulSoup
+import numpy as np 
+
+
 def check_percent(df):
 	# Takes a dataframe. returns false if there is a value not ends with '%'
 	for i in df:
@@ -74,3 +79,37 @@ def normalize_symbols(df):
 			elif cell == '✔':
 				df.at[i, col] = 'true'
 	return df
+
+def main(resp):
+	#subject = resp['subject']
+	#blob_name = resp['blob_name']
+	#guid = find_guid_from_subject(str(subject))
+	#info = tableInfoGuid(guid)
+	#logging.info(f"FOUND {guid} FOR {info['CompanyID'][0]}-{info['ID'][0]}")
+	#blob_service_client = BlobServiceClient.from_connection_string(sql_conn_string)
+	#blob_client = blob_service_client.get_blob_client(container='emailparser', blob=blob_name)
+	#download_stream = blob_client.download_blob()
+	#raw_html = download_stream.readall()
+	#soup = BeautifulSoup(raw_html)
+	#blob_contents = pd.read_html(str(soup.findAll("table")[-1]))
+	# Store html table to a dataframe
+	dataframe = None
+	longest = 0
+	# The largest html table is most likely the dataframe we are looking for.
+	for df in blob_contents:
+		if (len(df.index) > longest):
+			dataframe = df
+			longest = len(df.index)
+	dataframe = dataframe.replace("-", None)
+	# Loop through each column, check whether all the valeus in that column are percentage,
+	# if yes, convert percentage to decimal
+	for i in dataframe:
+		df = dataframe[i]
+		if check_percent(df) == True:
+			dataframe[i] = per_to_float(df)
+		if check_dolSign(df) == True:
+			dataframe[i] = dollar_strip(df)
+	strip_arrows(dataframe)
+	dataframe = normalize_symbols(dataframe) # replace All the "X" and "Y" to bool values, False/True
+	return dataframe
+	
