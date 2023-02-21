@@ -1,24 +1,4 @@
-
-import requests
-import json
-import pandas as pd
-import numpy as np
-from navisharedcode.SQLHelper import SQLHelper 
-from sqlalchemy import create_engine, event, inspect
-import urllib
-import requests
-from dotenv import load_dotenv
-from requests.auth import HTTPBasicAuth
-from atlassian import Jira
-load_dotenv()
-from datetime import datetime
-from navisharedcode.Logger import Logger
-from navisharedcode.helperfunctions import pretty_exception
-import re
-logger = Logger("jira_clickup_logs")
-s = SQLHelper('rpttrans')
-r = SQLHelper('rpt')
-p = SQLHelper('prod')
+#not adding packages 
 class ClickUp():
     def __init__(self,click_id = None):
         self.auth = HTTPBasicAuth("kit@navigatorcre.com", "VaA9Lbjv5PXWeqqFtN3O57FB")
