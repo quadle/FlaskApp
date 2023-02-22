@@ -1,7 +1,7 @@
 #not adding packages 
 class ClickUp():
     def __init__(self,click_id = None):
-        self.auth = HTTPBasicAuth("kit@navigatorcre.com", "VaA9Lbjv5PXWeqqFtN3O57FB")
+
 
         self.headers = {
         "Accept": "application/json",
