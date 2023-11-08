@@ -68,13 +68,13 @@ class ClickUp():
             jira_account_id = self.reporter_bridge.get(payload['assignees'][0]['username'])
             slayload = json.dumps( { "accountId": f"{jira_account_id}"} )
 
-            url = f"https://navigatorsrvs.atlassian.net/rest/api/3/issue/{jira_task}/assignee"
+            url = f"https://****.atlassian.net/rest/api/3/issue/{jira_task}/assignee"
             response = requests.request("PUT",url,headers=headers,auth = self.auth,data = slayload)
         except:
             jira_account_id = self.get_user_bridge().get(payload['assignees'][0]['id'])
             slayload = json.dumps( { "accountId": f"{jira_account_id}"} )
 
-            url = f"https://navigatorsrvs.atlassian.net/rest/api/3/issue/{jira_task}/assignee"
+            url = f"https://****.atlassian.net/rest/api/3/issue/{jira_task}/assignee"
             response = requests.request("PUT",url,headers=headers,auth = self.auth,data = slayload)
         finally:
             pass
@@ -227,7 +227,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     c = ClickUp()
     r = req.get_json()
     try:
-        if r['trigger_id'] == 'c4b5348e-6825-43d5-a883-d6e1b015e799':
+        if r['trigger_id'] == '****':
             info = c.custom_field_parse(r['payload'])
             jiraProject = 'CUT'
             ret = c.payload_to_jira(r['payload'],  'Task', info,jiraProject)
@@ -235,7 +235,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             #     return func.HttpResponse(json.dumps(ret),mimetype="application/json", status_code=200)
             # else:
             return func.HttpResponse('table successfully updated', status_code=200)
-        elif r['trigger_id'] == '670720d1-174a-4d3c-ba4e-0b5720ef5b29':
+        elif r['trigger_id'] == '****':
             jiraProject = 'CLJ'
             info = c.custom_field_parse(r['payload'])
             c.payload_to_jira(r['payload'],  'Task', info,jiraProject)

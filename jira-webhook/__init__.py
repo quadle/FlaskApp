@@ -86,7 +86,7 @@ class ClickUp():
         clickup_task_id = self.task.get(payload['issue']['key'])
         url = "https://api.clickup.com/api/v2/task/" + clickup_task_id + "/comment"
         query = {
-        "team_id": "14284640"
+        "team_id": "****"
         }
 
         payload = {

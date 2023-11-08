@@ -118,13 +118,13 @@ class ClickUp():
         }
         if isinstance(payload, str):
             slayload = json.dumps( { "accountId": f"{payload}"} )
-            url = f"https://navigatorsrvs.atlassian.net/rest/api/3/issue/{self.jira_task}/assignee"
+            url = f"https://****.atlassian.net/rest/api/3/issue/{self.jira_task}/assignee"
             response = requests.request("PUT",url,headers=self.headers,auth = self.auth,data = slayload)
         else:
             
             jira_account_id = self.get_user_bridge().get(payload['after']['id'])
             slayload = json.dumps( { "accountId": f"{jira_account_id}"} )
-            url = f"https://navigatorsrvs.atlassian.net/rest/api/3/issue/{self.jira_task}/assignee"
+            url = f"https://****.atlassian.net/rest/api/3/issue/{self.jira_task}/assignee"
             response = requests.request("PUT",url,headers=self.headers,auth = self.auth,data = slayload)
 
     def status(self,data):
@@ -342,13 +342,13 @@ class ClickUp():
                 issue_link = self.jira.create_issue_link(link_info)
 
     def updateFolder(self,data):
-        if data['webhook_id'] == "a84aa817-e65b-4a04-9ef6-1d29d7f4018c":
+        if data['webhook_id'] == "****":
             epic = self.get_epic_bridge().get(data['folder_id'])
             response = requests.get(f"https://api.clickup.com/api/v2/folder/{data['folder_id']}", headers=self.headers).json()
             self.jira.update_issue_field(epic,{'summary': response['name']})
 
     def updateList(self,data):
-        if data['webhook_id'] == "a84aa817-e65b-4a04-9ef6-1d29d7f4018c":
+        if data['webhook_id'] == "****":
             story = self.get_list_bridge().get(data['list_id'])
             response = requests.get(f"https://api.clickup.com/api/v2/list/{data['list_id']}", headers=self.headers).json()
             self.jira.update_issue_field(story,{'summary': response['name']})

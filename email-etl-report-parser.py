@@ -81,18 +81,7 @@ def normalize_symbols(df):
 	return df
 
 def main(resp):
-	#subject = resp['subject']
-	#blob_name = resp['blob_name']
-	#guid = find_guid_from_subject(str(subject))
-	#info = tableInfoGuid(guid)
-	#logging.info(f"FOUND {guid} FOR {info['CompanyID'][0]}-{info['ID'][0]}")
-	#blob_service_client = BlobServiceClient.from_connection_string(sql_conn_string)
-	#blob_client = blob_service_client.get_blob_client(container='emailparser', blob=blob_name)
-	#download_stream = blob_client.download_blob()
-	#raw_html = download_stream.readall()
-	#soup = BeautifulSoup(raw_html)
-	#blob_contents = pd.read_html(str(soup.findAll("table")[-1]))
-	# Store html table to a dataframe
+
 	dataframe = None
 	longest = 0
 	# The largest html table is most likely the dataframe we are looking for.

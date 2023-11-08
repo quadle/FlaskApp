@@ -46,18 +46,6 @@ class ClickUp():
             "outwardIssue": {"key": child}}
             issue_link = self.jira.create_issue_link(link_info)
 
-    # def cio(self,d):
-    #     # try:
-    #     for k,v in d.items():
-    #         for sub in v:
-
-    #             jira_parent = self.get_task_bridge().get(k)
-    #             jira_child = self.get_task_bridge().get(sub)
-    #             link_info =         {
-    #             "type": {"name": "Task" },
-    #             "inwardIssue": { "key": jira_parent},
-    #             "outwardIssue": {"key": jira_child}}
-    #             issue_link = self.jira.create_issue_link(link_info)
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
