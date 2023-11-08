@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            background:  url('https://wallpaperaccess.com/full/768981.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: top;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 82vh; 
+        }
+        .container {
+            width: 20%;
+            padding: 40px;
+            text-align: middle;
+
+            background-color: rgba(0, 55, 40, 0.35);
+            border: 0.5rem outset pink;
+            border-radius: 5%
+        }
+        h1 {
+            text-align: center;
+
+            font-size: 50px; 
+            -webkit-text-stroke: 1px #06fae6;
+            font-family: arial; color: #312d02;
+
+        }
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            -webkit-text-stroke: 1px #06fae6;
+            font-family: arial; color: #312d02;
+
+
+        }
+
+    
+        img.headshot {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .social-links {
+            color:  #1afa06;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color:  #1afa06;
+            margin: 10px;
+            font-size: 55px;
+            -webkit-text-stroke: 3px red;
+            font-family: arial; color: #1afa06;
+            text-decoration: none;
+        }
+        .navigation {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .navigation a {
+            margin-right: 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .top-right-pages {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+        }
+        
+        .top-right-pages a {
+            -webkit-text-stroke: 1.8px #e9fa03;
+            font-family: verdana; color: #ec664e;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 28px;
+            /* Add more styles as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img class="headshot" src="{{ user_image }}" alt="User Image">
+        <h1>Kit Wesselhoeft</h1>
+        <h2 style="font-style: italic;">Developer, Nerd, Doberman Enthusiast</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kit-wesselhoeft-764964138/" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+            </a>  
+            <a href="https://github.com/quadle" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/your-twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/kittredge/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="top-right-pages">
+            <a href="about">About Me</a>
+            <a href="projects">Projects</a>
+        </div>
+
+        
+        <!-- About Me section -->
+
+        <!-- Add more sections for your resume content -->
+    </div>
+</body>
+</html>

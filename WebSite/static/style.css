@@ -1,0 +1,31 @@
+p {
+    -webkit-text-stroke: 1px #dd03fa;
+    font-family: verdana; color: #f8e404;
+
+    font-size: 45px;
+    line-height: 55px;
+    background-color:rgba(0,0,0,0.7);
+
+  }
+
+h1 {
+  -webkit-text-stroke: 1.8px #e9fa03;
+  font-family: verdana; color: #ec664e;
+  font-size: 79px;
+  background-color:rgba(0,0,0,0.7);
+  }
+
+.top-right-pages {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
+
+.top-right-pages a {
+    -webkit-text-stroke: 1.8px #e9fa03;
+    font-family: verdana; color: #ec664e;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 28px;
+    /* Add more styles as needed */
+}
