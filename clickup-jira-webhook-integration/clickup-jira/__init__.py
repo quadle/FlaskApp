@@ -4,16 +4,12 @@ import requests
 import json
 from datetime import datetime
 import numpy as np
-from navisharedcode.SQLHelper import SQLHelper 
 import requests
 from requests.auth import HTTPBasicAuth
 from atlassian import Jira
 import logging
 import azure.functions as func
 import time
-s = SQLHelper()
-from navisharedcode.Logger import Logger
-from navisharedcode.helperfunctions import pretty_exception
 logger = Logger("jira_clickup_logs")
 
 

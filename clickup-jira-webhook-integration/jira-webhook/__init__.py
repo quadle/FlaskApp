@@ -3,22 +3,16 @@ import json
 import pandas as pd
 import numpy as np
 from atlassian import Jira
-from navisharedcode.SQLHelper import SQLHelper 
 import requests
 import azure.functions as func
 import logging 
-from navisharedcode.Logger import Logger
-from navisharedcode.helperfunctions import pretty_exception
-s = SQLHelper('rpttrans')
-r = SQLHelper('rpt')
-p = SQLHelper('prod')
-
 from requests.auth import HTTPBasicAuth
 
+#just add your jira creds to self.jira for webhook connection
 
 class ClickUp():
     def __init__(self):
-        #self.access_token = self.access_token()
+
         self.jira = Jira(url="******",username="******",password="******",verify_ssl=False)
         
     def get_task_bridge(self):
