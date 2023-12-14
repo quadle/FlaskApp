@@ -225,14 +225,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         if r['trigger_id'] == '****':
             info = c.custom_field_parse(r['payload'])
-            jiraProject = 'CUT'
+            jiraProject = '***'
             ret = c.payload_to_jira(r['payload'],  'Task', info,jiraProject)
-            # if isinstance(ret, dict):
-            #     return func.HttpResponse(json.dumps(ret),mimetype="application/json", status_code=200)
-            # else:
             return func.HttpResponse('table successfully updated', status_code=200)
         elif r['trigger_id'] == '****':
-            jiraProject = 'CLJ'
+            jiraProject = '***'
             info = c.custom_field_parse(r['payload'])
             c.payload_to_jira(r['payload'],  'Task', info,jiraProject)
             return func.HttpResponse('table successfully updated', status_code=200)
