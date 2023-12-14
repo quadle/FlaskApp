@@ -105,7 +105,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("JIRA_KEY: "+ f"{r['issue']['key']}")
     logging.info("CLICK_ID: "+ f"{c.task.get(r['issue']['key'])}")
     try:
-        if r['issue']['fields']['project']['key']  == 'CUT':
+        if r['issue']['fields']['project']['key']  == '---':
             if r['webhookEvent'] == 'comment_created':
                 c.add_comment(r)
 
