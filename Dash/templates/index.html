@@ -4,89 +4,191 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Navigator Stackplan</title>
+    <title>Kit Wesselhoeft</title>
     <style>
 
-
-        .image-right{
-            width: 190px;
-            height: 180px;
-            vertical-align: top-right;
-            float: right;
-            padding-right: 45px;
-            padding-top: 0px;
-        }
-        .button{
-            float: left;
-            position: absolute;
-            top: 10px;
-            left:20px;
-            padding: 8px 14px;
-            background-color: #3494FF;
-
-
-            color: #000000;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            letter-spacing: 0px;
-            overflow: hidden;
-            transition: 0.5s;
-            cursor: pointer;
-          }
-          
-        .button:hover{
-              background: #000000;
-              color: #3494FF;
-              box-shadow: 0 0 5px #0A55A9,
-                          0 0 25px #0A55A9,
-                          0 0 50px #003E84,
-                          0 0 200px #00244D;
-               -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+        .hero-banner {
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            position: relative;
+            justify-content: center;
+            z-index: -1;
           }
 
-        .roller{
-            float: left;
+          .hero-banner__title {
+            color: #ffffff;
+            font-size: 100px;
+            font-weight: 700;
+            padding: 0 20px;
             position: absolute;
-            top: -150px;
-            left: -50px;
+            text-align: center;
+            text-transform: uppercase;
+          }
 
-        }
+          .hero-banner__stroked-title {
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+            text-stroke: 2px white;
+          }
 
-        .dropper {
-            float: left;
+          .hero-banner__image {
+            border-radius: 20px;
+            position: fixed;
+
+            width: 450px;
+          }
+          .scroll {
+            font-family: serif;
+            color: #ffffff;
+            left: 0;
+            line-height: 200px;
+            margin-top: 100px;
             position: absolute;
-            left:55px;
-            top: 110px;
-            width: 55%;
-
-            
+            text-align: center;
+            top: 50%;
+            width: 100%;
         }
-        
-        .content {
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 140px;
-            padding-bottom: 2px;
-            
+
+          .scill {
+
+            color: #ffffff;
+            position: relative;
+
+            top: -390px;
+            left: 500px;
+
+
+          }
+          .h1 {
+            font-weight: normal;
+
+
+
+
         }
-        
+        .h2 {
+            font-weight: normal;
 
 
+
+
+
+
+
+        }
+        h3 {
+
+          font-family: serif;
+
+
+
+
+
+
+        }
+        body {
+          background-color: #000;
+
+        }
+          .delta {
+            background-color: #000;
+            font-size: 25px;
+            padding: 150px 100px;
+
+
+            display: inline-block;
+          }
+          @font-face {
+            font-family: 'Rocher';
+            src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+          }
+
+
+          @font-palette-values --Grays {
+
+            font-family: Rocher;
+            base-palette: 9;
+          }
+
+          @font-palette-values --Purples {
+            font-family: Rocher;
+            base-palette: 6;
+          }
+
+          @font-palette-values --Mint {
+            font-family: Rocher;
+            base-palette: 7;
+          }
+          @font-palette-values --Audun {
+            font-family: Rocher;
+            base-palette: 5;
+          }
+          .grays {
+
+            font-family: 'Rocher';
+            text-align: left;
+            font-palette: --Grays;
+          }
+
+          .purples {
+
+            font-family: 'Rocher';
+            text-align: left;
+            font-palette: --Purples;
+          }
+
+          .mint {
+            font-family: 'Rocher';
+            text-align: left;
+            font-palette: --Mint;
+          }
+
+          .audun {
+            font-family: 'Rocher';
+            text-align: left;
+            font-palette: --Audun;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          .content {
+            background-color: #000;
+            padding-left: 5px;
+            padding-right: 0px;
+            padding-top: 75px;
+            padding-bottom: 5px;
+
+
+        }
 
     </style>
 </head>
 
 <body>
-    
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2F20631305_640x640&f=1&nofb=1&ipt=da02925b0be3f229b0883d4d84ce1457a38a85de2c0e559e44c12371c6c8e868&ipo=images" class = "image-right">
-    
-</div>
+
+    <div class="hero-banner">
+        <div class="hero-banner__title" aria-hidden="true">Kit Wesselhoeft</div>
+        <img class="hero-banner__image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-srG21eLa-Gw%2FTpfLzMliLNI%2FAAAAAAAAAyc%2F-bVci97Hd80%2Fw1200-h630-p-k-no-nu%2Fansel-adams-landscape-photography-moonrise-over-hernandez-new-mexico-1941.jpg&f=1&nofb=1&ipt=2aa211a8c5f31a403e1f6d3c42ad9de3eb44ddf2e8280b61765eb2158d4242fb&ipo=images"/>
+        <h1 class="hero-banner__title hero-banner__stroked-title">Kit Wesselhoeft</h1>
+
+      </div>
+      <div class="scroll">
+        <h3> ~ scroll down ~ <h3/>
+        </div>
+      <div class="delta">
+        <h1 class="purples">Hello! I'm Kit Wesselhoeft.</h1>
+
+        <h2 class="grays">I'm a Seattle-area resident and data engineer with 10 years of hands-on experience using the Python programming language in a real estate sales and management context. My goal here is to display my experience using Python.</h2>
+        <h2 class="grays">By scrolling down, you will see an example of a 'Stacking Plan' that I've created using Python and the building-block frameworks of Flask and Plotly.</h2>
+        <h2 class = "grays">Commercial property owners use these plans to get a quick and comprehensive look at the size and status of their tenants.</h2>
+      </div>
+
     <div class="content">
 
         {%app_entry%}
     </div>
-     
+
 
 </div>
   {%config%}
