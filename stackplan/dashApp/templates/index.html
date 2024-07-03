@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Navigator Stackplan</title>
+    <style>
+
+
+        .image-right{
+            width: 190px;
+            height: 180px;
+            vertical-align: top-right;
+            float: right;
+            padding-right: 45px;
+            padding-top: 0px;
+        }
+        .button{
+            float: left;
+            position: absolute;
+            top: 10px;
+            left:20px;
+            padding: 8px 14px;
+            background-color: #3494FF;
+
+
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 0px;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+          }
+          
+        .button:hover{
+              background: #000000;
+              color: #3494FF;
+              box-shadow: 0 0 5px #0A55A9,
+                          0 0 25px #0A55A9,
+                          0 0 50px #003E84,
+                          0 0 200px #00244D;
+               -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+          }
+
+        .roller{
+            float: left;
+            position: absolute;
+            top: -150px;
+            left: -50px;
+
+        }
+
+        .dropper {
+            float: left;
+            position: absolute;
+            left:55px;
+            top: 110px;
+            width: 55%;
+
+            
+        }
+        
+        .content {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 140px;
+            padding-bottom: 2px;
+            
+        }
+        
+
+
+
+    </style>
+</head>
+
+<body>
+    
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.vimeocdn.com%2Fportrait%2F20631305_640x640&f=1&nofb=1&ipt=da02925b0be3f229b0883d4d84ce1457a38a85de2c0e559e44c12371c6c8e868&ipo=images" class = "image-right">
+    
+</div>
+    <div class="content">
+
+        {%app_entry%}
+    </div>
+     
+
+</div>
+  {%config%}
+  {%scripts%}
+  {%renderer%}
+
+</body>
+</html>
