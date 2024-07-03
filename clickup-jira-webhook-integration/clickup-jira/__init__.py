@@ -12,7 +12,7 @@ import azure.functions as func
 import time
 logger = Logger("jira_clickup_logs")
 
-#test push
+#test pushg
 class ClickUp():
     def __init__(self):
         self.auth = HTTPBasicAuth("******@email.com", "******")
