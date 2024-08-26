@@ -23,7 +23,7 @@ def is_within_next_12_months(target_date):
 
 
 def get_df():
-    df = pd.read_excel('mysite/templates/data.xlsx')
+    df = pd.read_excel('FlaskApp/Dash/templates/data.xlsx')
     df['totFLOORsqrft'] = df.groupby('FLOORNO')['SUITSQFT'].transform("sum")
     df['PercentageWithSquareFeet'] = df[df['SUITSQFT'] > 0].groupby('FLOORNO')['SUITSQFT'].transform('count')
     df['date'] = pd.to_datetime(df['EXPIR']).dt.date
@@ -77,7 +77,7 @@ def get_df():
     return df
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-with open('mysite/templates/index.html','r') as f:
+with open('FlaskApp/Dash/templates/index.html','r') as f:
     html_string = f.read()
 app = Flask(__name__)
 dash = Dash(__name__,  server=app, index_string=html_string)
